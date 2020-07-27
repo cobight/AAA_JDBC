@@ -1,0 +1,72 @@
+						【内链接】
+						写法1隐式内链接
+select
+	*  或  t1.id,
+	t2.name,
+	t2.sex........
+from
+	表名列表1  (as) t1,
+	表名列表2  t2,........
+where  t1.id = t2.id; -- 范围
+
+
+
+mysql> select cj.id,cj.name,cj.math,cj.english,cj.sex,class.phone from cj,class where cj.id = class.id;
++------+------+------+---------+------+--------+
+| id   | name | math | english | sex  | phone  |
++------+------+------+---------+------+--------+
+|    1 | aaa  |   90 |      91 | boy  | 123456 |
+|    2 | bbb  |   92 |      93 | boy  | 12345  |
+|    3 | ccc  |   90 |    NULL | girl | 1234   |
++------+------+------+---------+------+--------+
+						写法2显式内链接
+select * from cj (inner) join class on  cj.id=class.id;
+
+mysql> select * from cj inner join class on  cj.id = class.id;
++------+------+---------+------+------+----+------+--------+
+| name | math | english | sex  | id   | id | name | phone  |
++------+------+---------+------+------+----+------+--------+
+| aaa  |   90 |      91 | boy  |    1 |  1 | aaa  | 123456 |
+| bbb  |   92 |      93 | boy  |    2 |  2 | bbb  | 12345  |
+| ccc  |   90 |    NULL | girl |    3 |  3 | ccc  | 1234   |
++------+------+---------+------+------+----+------+--------+
+3 rows in set (0.21 sec)
+
+						【外链接】
+						左外链接：查的时左表的所有+右表的交集部分
+select 字段列表 from 表1  left [outer] join 表2 on 条件
+
+mysql> select t1.id,t1.name,t2.part from cj t1,class t2 where t1.id=t2.id;
++------+------+--------+
+| id   | name | part   |
++------+------+--------+
+|    1 | aaa  | 一班   |
+|    2 | bbb  | 一班   |
+|    3 | ccc  | 二班   |
++------+------+--------+
+3 rows in set (0.01 sec)
+
+mysql> select * from cj t1 left join class t2 on t1.id=t2.id;
++------+------+---------+------+------+------+------+--------+--------+
+| name | math | english | sex  | id   | id   | name | phone  | part   |
++------+------+---------+------+------+------+------+--------+--------+
+| aaa  |   90 |      91 | boy  |    1 |    1 | aaa  | 123456 | 一班   |
+| bbb  |   92 |      93 | boy  |    2 |    2 | bbb  | 12345  | 一班   |
+| ccc  |   90 |    NULL | girl |    3 |    3 | ccc  | 1234   | 二班   |
+| ddd  |   50 |      50 | girl | NULL | NULL | NULL | NULL   | NULL   |
++------+------+---------+------+------+------+------+--------+--------+
+4 rows in set (0.00 sec)
+
+						右外链接
+select * from class t1 right join cj t2 on t1.id=t2.id;
+
+mysql> select * from class t1 right join cj t2 on t1.id=t2.id;
++------+------+--------+--------+------+------+---------+------+------+
+| id   | name | phone  | part   | name | math | english | sex  | id   |
++------+------+--------+--------+------+------+---------+------+------+
+|    1 | aaa  | 123456 | 一班   | aaa  |   90 |      91 | boy  |    1 |
+|    2 | bbb  | 12345  | 一班   | bbb  |   92 |      93 | boy  |    2 |
+|    3 | ccc  | 1234   | 二班   | ccc  |   90 |    NULL | girl |    3 |
+| NULL | NULL | NULL   | NULL   | ddd  |   50 |      50 | girl | NULL |
++------+------+--------+--------+------+------+---------+------+------+
+4 rows in set (0.00 sec)

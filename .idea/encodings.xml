@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/sql.txt" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/事务操作-转账.txt" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/多表查询.txt" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/子查询.txt" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/用户操作.txt" charset="UTF-8" />
+  </component>
+</project>

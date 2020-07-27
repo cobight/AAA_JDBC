@@ -1,0 +1,170 @@
+show databases; -- 查所有数据库
+create database *** （character set gbk）; -- 创建一个叫***的数据库
+drop database ***; -- 删除一个叫***的数据库
+
+use ***;select database();
+
+create table student
+(
+	age int,
+	score double(5,2),  -- 共五位，小数点后有两位
+	name varchar(10), -- 字符可以10位
+	birthday date -- 只包含年月日 yyy-MM-dd
+	# *** datetime, -- 年月日时分秒 yyy-MM-dd HH:mm:ss
+);
+
+
+create table ***(
+col1 type1 [not null] [primary key],
+col2 type2 [not null],
+name varchar[32] nut null primary key,
+...
+); -- 创建表
+drop table ***; -- 删除表
+rename table ***to ***1; -- 表改名
+show tables; -- 查所有表
+show create table ***; -- 查表
+desc ***; -- 查表
+
+列操作
+alter table *** add school varchar(20); -- 加一列
+alter table *** change name rename varchar(20); -- 改名改类型
+alter table *** modify sex varchar(10); -- 只改类型
+alter table *** drop sex; -- 删除列
+
+数据增删改查
+
+INSERT INTO std(age,name) values(10,"卢本伟");
+delete from table1 where time is null;
+update std set name='fuc' where 范围
+起别名：select name  '姓名',math+IFNULL(english,0) as '总分' from cj;
+
+select distinct去重
+	name,
+	age,
+	math+IFNULL(english,0) as '总分'
+from
+	std
+where
+	age>10
+	AND math>95
+	AND english between 95 AND 99
+	AND english is  not null
+	OR age=18
+	OR age in(18,20,25)
+
+	name like a__, -- 一个下划线一个字符
+	name like a%, -- 一个百分号多个字符
+
+	order by [asc,desc], -- 升序
+	order by math asc,english desc, -- 数学升序，数学分数一样再按英语分降序
+group by sex
+having count(id) > 2 -- 大于两个才会显示，小于两个就不显示
+limit 0,1 -- 从0开始显示1个，limit时mysql的专有方言，其他数据库不用这个limit
+;
+聚合函数：排除null值计算
+	count数量    select cout(ifnull(english,0)) from cj;
+	max,min,xum(**,**)
+	avg平均值
+分组查询：(查询内容要么  查询字段，要么聚合函数)
+	select sex , avg(math),count(id) from cj group by sex;
+分页查询：limit起始位置0，显示数量
+	select * from cj limit 0,1;
+
+
+四种约束
+	主键约束：primary key（非空且唯一，只能一个字段是主键，主键就是表中记录的唯一标识）
+		alter table ** drop primary key;删
+		alter table ** modify id int primary key;加
+		alter table ** add PRIMARY key(字段名);
+		alter table ** drop primary key;
+	非空约束：not null
+		alter table ** modify name varchar(20);删
+		alter table ** modify name varchar(20) not null;加
+	唯一约束：unique(空值null除外,可以重复)
+		alter table ** drop index phone;删
+		alter table ** modify phone varchar(20) unique;加
+	外键约束：foreign key
+
+	一句约束：
+		alter table ** change 旧字段名 新字段名 int not null;
+		alter table ** change 旧字段名 新字段名 int primary key;
+		alter table ** change 旧字段名 新字段名 int unique;
+	只改约束：
+		alter table ** modify 字段名 varchar(22);删
+		alter table ** modify 字段名 varchar(22) 【not null/primary key/unique】;加
+auto_increment 自增长，只跟上一条记录有关
+	alter table class modift id int;删
+	alter table class modify id int auto_increment;加
+create table class(
+	id int primary key auto_increment,
+	name varchar(20),
+	phone varchar(20) unique
+);
+insert into class values(null,'aaa','123456');
+
+
+
+		外键
+create table department(
+	id int primary key auto_increment,
+	dep_name varchar(20),
+	dep_location varchar(20)
+);
+create table employee(
+	id int primary key auto_increment,
+	name varchar(20),
+	age int,
+	dep_id int, -- 可以为null，不能为department的id外的值
+	constraint emp_dept_fk foreign key (dep_id) references department(id)
+);
+insert into department values(null,'研发部','广州'),(null,'销售部','深圳');
+
+insert into employee(name,age,dep_id) values('张三',20,1);
+insert into employee(name,age,dep_id) values('李四',21,1);
+insert into employee(name,age,dep_id) values('王五',20,1);
+insert into employee(name,age,dep_id) values('老王',20,2);
+insert into employee(name,age,dep_id) values('大王',22,2);
+insert into employee(name,age,dep_id) values('小王',18,2);
+
+
+alter table employee drop foreign key emp_dept_fk; -- 删除外键
+alter table employee add constraint emp_dept_fk foreign key (dep_id) references department(id);
+alter table employee add constraint emp_dept_fk foreign key (dep_id) references department(id) on update cascade on delete cascade; -- 更新删除-级联动，改外键列的值会联动两个table
+
+
+
+
+
+
+数据库的设计
+	多表之间的关系
+		1.一对一：人与身份证
+		2.一对多（多对一）：部门与员工
+		3.多对多：学生与课程
+数据库备份与还原
+	基本语法：mysqldump/ mysqldump.exe  -hPup 数据库名字 [表1  [表2 …]] > 备份文件地址
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1111

@@ -1,0 +1,55 @@
+create table account(
+	id int primary key auto_increment,
+	name varchar(20),
+	balance double
+);
+insert into account values(null,'aaa',1000),(null,'bbb',1000);
+
+start transaction;
+update account set balance = balance-500 where name='aaa';
+update account set balance = balance+500 where name='bbb';
+
+--异时常：
+rollback; -- 回到start transaction
+commit;
+
+
+
+
+		修改自动提交
+select @@autocommit; -- 1自动提交，2不自动提交，需要手动commit
+set @@commit =0;
+
+			事务的四大特征
+			1原子性(不可分割的最小操作单位，要么同时成功/失败)
+			2持久性(当事务提交或回滚，数据库会持久化的保存数据)
+			3隔离性(多个事务之间相互独立)
+			4一致性(事务操作前后，总量不变)
+					隔离级别（了解）
+		**存在问题：
+1脏读（事务1读到了【事务2还没提交时的数据】）
+2不可重复读（虚读）（同一事务中，两次读取到的数据不一样），事务1操作时，事务2每次查询的数据都不一样
+3幻读（一个事物操作dml数据表中所有记录，另一个事务添加了一条数据，则第一个事务查询不到自己的修改），事务1无论怎么变动，事务2查询的数据都不会变动
+		**隔离界别
+1、read uncommitted读未提交
+	*脏读、不可重复读、幻读
+2、read commited读已提交【Oracle默认】
+	*不可重复读、幻读
+3、repeatable read可重复读【MySQL默认】
+	*幻读
+4、serializable串行化
+	*可解决所有问题，加锁操作，事务1操作时，事务2会等待事务1commit
+			*注意：隔离级别从小到大安全性rise，效率fall
+数据库查询隔离级别：
+	*select @@tx_isolation;
+数据库设置隔离级别：
+	*set global transaction isolation level 级别字符串;
+	*关闭终端从新打开生效
+
+
+
+
+
+
+
+
