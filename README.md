@@ -102,7 +102,9 @@ test（随便玩，空的）
 
 ## 数据类型
 
+<span>
 <img src='http://cobight.cn/image-20200727230558451.png' /> 
+</span>
 
 ## CRUD
 
