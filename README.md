@@ -102,7 +102,7 @@ test（随便玩，空的）
 
 ## 数据类型
 
-<img src='https://note.youdao.com/yws/api/personal/file/2FB73125319642268D5539A104D57F51?method=download&shareKey=1e8dff8ca1a96b7743548d0083147796' /> 
+<img src='http://cobight.cn/image-20200727230558451.png' /> 
 
 ## CRUD
 
