@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5c77423c-3831-4f92-b449-33c250ce0d31" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/README.assets/image-20200727230531523.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.assets/image-20200727230558451.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/AAA7_28/bofroreclass/Demo1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AAA8_3/inclass/Class1.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AAA7_28/bofroreclass/Demo1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AAA7_28/bofroreclass/Demo1.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,11 +37,34 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../AAA_JAVA" />
+    <property name="last_opened_file_path" value="F:/INtelliJ_Idea_Space" />
+    <property name="node.js.detected.package.stylelint" value="true" />
+    <property name="node.js.path.for.package.stylelint" value="project" />
+    <property name="node.js.selected.package.stylelint" value="" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="settings.css.dialects" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Class1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="AAA8_3.inclass.Class1" />
+      <module name="AAA_JDBC" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="AAA8_3.inclass.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Class1" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -72,6 +94,35 @@
       <workItem from="1595903725905" duration="598000" />
       <workItem from="1595921088146" duration="308000" />
       <workItem from="1595921834241" duration="317000" />
+      <workItem from="1595927174405" duration="116000" />
+      <workItem from="1595927308772" duration="4000" />
+      <workItem from="1595927327897" duration="2121000" />
+      <workItem from="1595936189322" duration="30000" />
+      <workItem from="1595936236085" duration="8000" />
+      <workItem from="1595936259822" duration="70000" />
+      <workItem from="1595936344345" duration="25000" />
+      <workItem from="1595936382216" duration="927000" />
+      <workItem from="1595937875485" duration="868000" />
+      <workItem from="1595938796210" duration="18000" />
+      <workItem from="1595943314649" duration="134000" />
+      <workItem from="1595943483475" duration="13000" />
+      <workItem from="1595943512375" duration="45000" />
+      <workItem from="1595943579316" duration="971000" />
+      <workItem from="1595944568481" duration="320000" />
+      <workItem from="1595985168062" duration="964000" />
+      <workItem from="1595986167128" duration="2737000" />
+      <workItem from="1595989619581" duration="50000" />
+      <workItem from="1595989681366" duration="19000" />
+      <workItem from="1595989714740" duration="71000" />
+      <workItem from="1595989809971" duration="331000" />
+      <workItem from="1595990154012" duration="794000" />
+      <workItem from="1595990993019" duration="163000" />
+      <workItem from="1595991213654" duration="118000" />
+      <workItem from="1595991364460" duration="342000" />
+      <workItem from="1595991732368" duration="3072000" />
+      <workItem from="1596012366580" duration="600000" />
+      <workItem from="1596068583467" duration="996000" />
+      <workItem from="1596419466147" duration="7894000" />
     </task>
     <servers />
   </component>
@@ -82,17 +133,53 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="634" y="260" key="FileChooserDialogImpl" timestamp="1595898893515">
+    <state x="531" y="110" key="#Custom_Plugin_Repositories" timestamp="1595985560103">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="634" y="260" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1595898893515" />
-    <state x="440" y="94" key="SettingsEditor" timestamp="1595816195447">
+    <state x="531" y="110" key="#Custom_Plugin_Repositories/0.0.1920.1040@0.0.1920.1040" timestamp="1595985560103" />
+    <state x="552" y="178" key="#Notifications" timestamp="1595985838333">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="440" y="94" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1595816195447" />
-    <state x="334" y="130" key="new project wizard" timestamp="1595817339594">
+    <state x="552" y="178" key="#Notifications/0.0.1920.1040@0.0.1920.1040" timestamp="1595985838333" />
+    <state x="454" y="228" key="FileChooserDialogImpl" timestamp="1596442484145">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="334" y="130" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1595817339594" />
+    <state x="454" y="228" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1596442484145" />
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1596446858367">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1596446858367" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1596446858367">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1596446858367" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1596446858367">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1596446858367" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1596446858367">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1596446858367" />
+    <state x="440" y="94" key="SettingsEditor" timestamp="1596442401229">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="440" y="94" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1596442401229" />
+    <state x="334" y="130" key="new project wizard" timestamp="1596442535582">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="334" y="130" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1596442535582" />
+    <state x="636" y="366" width="716" height="307" key="org.intellij.images.editor.actions.BackgroundImageDialog" timestamp="1595985886562">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="636" y="366" width="716" height="307" key="org.intellij.images.editor.actions.BackgroundImageDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1595985886562" />
+    <state x="616" y="240" key="run.anything.popup" timestamp="1595936433392">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1595936433392" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1595988308223">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1595988308223" />
   </component>
 </project>
